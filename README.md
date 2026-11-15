@@ -75,6 +75,8 @@ Total revenue was **$6,750**.
 ## Project Files
 
 - `analysis.sql` — Contains all seven SQL analysis queries.
+- `README.md` — Project documentation and key findings.
+- `Retail_Sales_Analysis(Sales_Data) (1).csv` — The retail sales dataset used for analysis.
 
 ## Conclusion
 
