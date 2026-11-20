@@ -29,23 +29,37 @@ It includes the following columns:
 
 ## SQL Analysis
 
-The project uses SQL queries to perform seven analyses:
+The project includes 13 SQL queries covering:
 
-1. Calculate total revenue.
-2. Calculate revenue by product.
-3. Calculate revenue by category.
-4. Calculate revenue by salesperson.
-5. Count orders per salesperson.
-6. Calculate average order revenue per salesperson.
-7. Calculate units sold by product.
+1. Identify distinct products.
+2. Count orders for each product.
+3. Find products with more than one order.
+4. Calculate total revenue by product.
+5. Calculate total revenue, order count, and average sale by product.
+6. Find products with total revenue above $1,000 using a subquery.
+7. Find orders above the overall average sale.
+8. Find orders above their product's average sale using a correlated subquery.
+9. Use `EXISTS` to find products with matching orders.
+10. Categorize individual sales using `CASE WHEN`.
+11. Count orders in each sales category.
+12. Calculate total revenue by salesperson.
+13. Calculate average sale and order count by salesperson.
 
-SQL functions and operations used include:
+### SQL Functions and Techniques Used
 
+- `SELECT`
+- `DISTINCT`
+- `WHERE`
+- `ORDER BY`
 - `SUM()`
 - `COUNT()`
 - `AVG()`
 - `GROUP BY`
-- `ORDER BY`
+- `HAVING`
+- Subqueries
+- Correlated subqueries
+- `EXISTS`
+- `CASE WHEN`
 
 ## Key Findings
 
@@ -72,9 +86,17 @@ Total revenue was **$6,750**.
 - Alex handled 8 orders, while Maya handled 7.
 - Maya had a higher average order revenue of $485.71 compared to Alex's $418.75.
 
+### Sales Categories
+
+Using `CASE WHEN` to categorize sales:
+
+- High Sale ($500 or more): 8 orders.
+- Medium Sale ($200–$499.99): 3 orders.
+- Low Sale (under $200): 4 orders.
+
 ## Project Files
 
-- `analysis.sql` — Contains all seven SQL analysis queries.
+- `analysis.sql` — Contains all 13 SQL analysis queries.
 - `README.md` — Project documentation and key findings.
 - `Retail_Sales_Analysis(Sales_Data) (1).csv` — The retail sales dataset used for analysis.
 
@@ -82,6 +104,6 @@ Total revenue was **$6,750**.
 
 This project demonstrates how SQL can be used to organize, summarize, and analyze retail sales data.
 
-The analysis identified top-performing products, revenue differences between categories, and salesperson performance.
+The analysis identified top-performing products, revenue differences between categories, salesperson performance, and sales distribution.
 
 **Note:** The dataset is simulated and was created for portfolio and learning purposes.
